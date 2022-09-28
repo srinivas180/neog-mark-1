@@ -4,19 +4,6 @@ var userName = readline.question("What is your name? - ");
 console.log("Hello " + userName + " Welcome to \"Do you know me\" quiz");
 
 var score = 0;
-function quiz(question, correctAnswer) {
-    var userAnswer = readline.question(question + " - ");
-    if(userAnswer == correctAnswer) {
-        score = score + 1;
-        console.log("Correct Answer");
-    }
-    else {
-        score = score - 1;
-        console.log("Wrong Answer");
-    }
-    console.log("Score: " + score);
-}
-
 var questionsAndAns = [
     {
         question: "Where do I live?",
@@ -39,6 +26,19 @@ var questionsAndAns = [
         answer: "xyz"
     }
 ]
+
+function quiz(question, correctAnswer) {
+    var userAnswer = readline.question(question + " - ");
+    if(userAnswer === correctAnswer) {
+        score = score + 1;
+        console.log("Correct Answer");
+    }
+    else {
+        score = score - 1;
+        console.log("Wrong Answer");
+    }
+    console.log("Score: " + score);
+}
 
 for(var i = 0; i < questionsAndAns.length; i++) {
     var currentQuestion = questionsAndAns[i];
