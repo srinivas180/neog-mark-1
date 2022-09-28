@@ -45,4 +45,4 @@ for(var i = 0; i < questionsAndAns.length; i++) {
     quiz(currentQuestion.question, currentQuestion.answer);
 }
 
-console.log("Final score - " + score);
+console.log("Final score: " + score);
